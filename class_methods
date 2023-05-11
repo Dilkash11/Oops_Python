@@ -1,0 +1,21 @@
+#Class Method as alternative constructor
+class Employees:
+    def __init__(self, name, age, asalary):
+        self.name = aname
+        self.age = age
+        self.salary = asalary
+
+    @classmethod 
+     def from_slash(cls,string):
+          return cls(*string.split("/"))
+
+Alex=Date.from_dash("Alex/25/70000")
+print(Alex.asalary)
+#Output: 70000
+
+# Static Method in class
+   @staticmethod
+     defm printgood(string):
+       print("This is good"+ string)
+Employees.printgood("Harry")
+#Output: This is good Harry
