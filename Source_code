@@ -1,0 +1,60 @@
+class employees:
+  no_of_leaves=8
+  pass
+
+
+harry=employees()
+larry=employees()
+
+harry.name='Anjali'
+harry.role='Analyst'
+
+larry.name='Hemaini'
+larry.role='Data Analyst'
+larry.no_of_leaves=7
+
+print(harry.no_of_leaves,larry.no_of_leaves)
+#output: 8,7
+
+
+class employees:
+  no_of_leaves=8
+  pass
+
+  def printdetails(self):
+     return f"The name is {self.name}.  role is {self.role}"
+
+
+harry=employees()
+larry=employees()
+
+harry.name='Anjali'
+harry.role='Analyst'
+
+larry.name='Larry'
+larry.role='Data Analyst'
+larry.no_of_leaves=7
+
+#print(harry.no_of_leaves,larry.no_of_leaves)
+print(larry.printdetails())
+#output:The name is Larry.  role is Data Analyst
+
+
+
+class Person:
+  no_of_leaves=8
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+
+  @classmethod
+  def change_leaves(cls,newleaves):
+    cls.no_of_leaves=newleaves
+
+p1 = Person("John", 36)
+print(p1.name)
+
+Person.change_leaves(389)
+print(p1.no_of_leaves)
+#Output: John
